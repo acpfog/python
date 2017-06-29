@@ -1,8 +1,33 @@
-# 6.00x Problem Set 4A Template
-#
-# The 6.00 Word Game
-# Created by: Kevin Luu <luuk> and Jenna Wiens <jwiens>
-# Modified by: Sarina Canelake <sarina>
+# 
+# A Word Game: Part a
+# 
+# This game is a lot like Scrabble or Words With Friends, if you've played those.
+# Letters are dealt to players, who then construct one or more words out of their letters.
+# Each valid word receives a score, based on the length of the word and the letters in that word.
+# 
+# The rules of the game are as follows:
+# 
+# Dealing
+# A player is dealt a hand of n letters chosen at random (assume n=7 for now).
+# 
+# The player arranges the hand into as many words as they want out of the letters, using each letter at most once.
+# 
+# Some letters may remain unused (these won't be scored).
+# 
+# Scoring
+# The score for the hand is the sum of the scores for each word formed.
+# 
+# The score for a word is the sum of the points for letters in the word, multiplied by the length of the word,
+# plus 50 points if all n letters are used on the first word created.
+# 
+# Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is worth 3, D is worth 2, E is worth 1, and so on.
+# We have defined the dictionary SCRABBLE_LETTER_VALUES that maps each lowercase letter to its Scrabble letter value.
+# 
+# For example, 'weed' would be worth 32 points ((4+1+1+2) for the four letters, then multiply by len('weed') to get (4+1+1+2)*4 = 32).
+# Be sure to check that the hand actually has 1 'w', 2 'e's, and 1 'd' before scoring the word!
+# 
+# As another example, if n=7 and you make the word 'waybill' on the first try, it would be worth 155 points
+# (the base score for 'waybill' is (4+1+4+3+1+1+1)*7=105, plus an additional 50 point bonus for using all n letters).
 #
 
 import random
@@ -16,9 +41,6 @@ SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
 
-# -----------------------------------
-# Helper code
-# (you don't need to understand this helper code)
 
 WORDLIST_FILENAME = "words.txt"
 
@@ -54,12 +76,8 @@ def getFrequencyDict(sequence):
         freq[x] = freq.get(x,0) + 1
     return freq
 	
-
-# (end of helper code)
-# -----------------------------------
-
 #
-# Problem #1: Scoring a word
+# Scoring a word
 #
 def getWordScore(word, n):
     """
@@ -86,7 +104,7 @@ def getWordScore(word, n):
     return score * len(word) + bonus
 
 #
-# Problem #2: Make sure you understand how this function works and what it does!
+# Make sure you understand how this function works and what it does!
 #
 def displayHand(hand):
     """
@@ -106,7 +124,7 @@ def displayHand(hand):
     print                               # print an empty line
 
 #
-# Problem #2: Make sure you understand how this function works and what it does!
+# Make sure you understand how this function works and what it does!
 #
 def dealHand(n):
     """
@@ -134,7 +152,7 @@ def dealHand(n):
     return hand
 
 #
-# Problem #2: Update a hand by removing letters
+# Update a hand by removing letters
 #
 def updateHand(hand, word):
     """
@@ -160,10 +178,8 @@ def updateHand(hand, word):
             hand2[letter] -= 1
     return hand2
 
-
-
 #
-# Problem #3: Test word validity
+# Test word validity
 #
 def isValidWord(word, hand, wordList):
     """
@@ -189,9 +205,8 @@ def isValidWord(word, hand, wordList):
         return False
 
 #
-# Problem #4: Playing a hand
+# Playing a hand
 #
-
 def calculateHandlen(hand):
     """ 
     Returns the length (number of letters) in the current hand.
@@ -204,8 +219,6 @@ def calculateHandlen(hand):
         if hand.get(letter,0) != 0:
             num += hand[letter]
     return num
-
-
 
 def playHand(hand, wordList, n):
     """
@@ -265,9 +278,8 @@ def playHand(hand, wordList, n):
 
 
 #
-# Problem #5: Playing a game
+# Playing a game
 # 
-
 def playGame(wordList):
     """
     Allow the user to play an arbitrary number of hands.

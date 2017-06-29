@@ -1,10 +1,10 @@
-from ps4a import *
-
 #
-# Test code
-# You don't need to understand how this test code works (but feel free to look it over!)
-
+# Unit tests for the game stored in ps4a_wordgame.py
+#
 # To run these tests, simply run this file (open up in IDLE, then run the file as normal)
+#
+
+from ps4a_wordgame import *
 
 def test_getWordScore():
     """
@@ -21,9 +21,6 @@ def test_getWordScore():
             failure=True
     if not failure:
         print "SUCCESS: test_getWordScore()"
-
-# end of test_getWordScore
-
 
 def test_updateHand():
     """
@@ -95,8 +92,6 @@ def test_updateHand():
         return # exit function
 
     print "SUCCESS: test_updateHand()"
-
-# end of test_updateHand
 
 def test_isValidWord(wordList):
     """

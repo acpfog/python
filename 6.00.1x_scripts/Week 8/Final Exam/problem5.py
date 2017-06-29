@@ -1,4 +1,17 @@
-## DO NOT MODIFY THE IMPLEMENTATION OF THE Person CLASS ##
+# In this problem, you will implement a class according to the specifications in the template file usresident.py.
+# The file contains a Person class similar to what you have seen in lecture and a USResident class (a subclass of Person).
+# Person is already implemented for you and you will have to implement two methods of USResident.
+# 
+# For example, the following code:
+# 
+# a = USResident('Tim Beaver', 'citizen')
+# print a.getStatus()
+# b = USResident('Tim Horton', 'non-resident')
+# will print out:
+# 
+# citizen
+# ## will show that a ValueError was raised at a particular line
+
 class Person(object):
     def __init__(self, name):
         #create a person with name name

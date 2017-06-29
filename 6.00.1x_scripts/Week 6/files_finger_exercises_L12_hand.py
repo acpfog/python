@@ -1,3 +1,7 @@
+#
+# An object-oriented implementation of the hand from the word game problem of Problem Set 4
+#
+
 import random 
 
 class Hand(object):

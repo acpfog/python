@@ -1,3 +1,11 @@
+# 
+# In your Queue class, you will need three methods:
+# 
+# __init__: initialize your Queue (think: how will you store the queue's elements? You'll need to initialize an appropriate object attribute in this method)
+# insert: inserts one element in your Queue
+# remove: removes (or 'pops') one element from your Queue and returns it. If the queue is empty, raises a ValueError.
+# 
+
 class Queue(object):
     def __init__(self):
         self.vals = []

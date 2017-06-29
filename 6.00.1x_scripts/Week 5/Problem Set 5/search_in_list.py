@@ -1,3 +1,8 @@
+# 
+# search() is a version of linear search that used the fact that a set of elements is sorted in increasing order
+# newsearch() is an alternative version of search()
+#
+
 def search(L, e):
     for i in range(len(L)):
         if L[i] == e:

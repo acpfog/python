@@ -1,6 +1,10 @@
+#
+# Decrypt a story from story.txt encrypted with a well-known (though not very secure)
+# encryption method called the Caesar cipher using a dictionary words.txt
+# 
+
 import string
 
-### DO NOT MODIFY THIS FUNCTION ###
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing 
@@ -22,7 +26,6 @@ def load_words(file_name):
     in_file.close()
     return word_list
 
-### DO NOT MODIFY THIS FUNCTION ###
 def is_word(word_list, word):
     '''
     Determines if word is a valid word, ignoring
@@ -43,7 +46,6 @@ def is_word(word_list, word):
     word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
     return word in word_list
 
-### DO NOT MODIFY THIS FUNCTION ###
 def get_story_string():
     """
     Returns: a joke in encrypted text.
@@ -70,7 +72,6 @@ class Message(object):
         self.message_text = text
         self.valid_words = load_words(WORDLIST_FILENAME)
 
-    ### DO NOT MODIFY THIS METHOD ###
     def get_message_text(self):
         '''
         Used to safely access self.message_text outside of the class
@@ -79,7 +80,6 @@ class Message(object):
         '''
         return self.message_text
 
-    ### DO NOT MODIFY THIS METHOD ###
     def get_valid_words(self):
         '''
         Used to safely access a copy of self.valid_words outside of the class

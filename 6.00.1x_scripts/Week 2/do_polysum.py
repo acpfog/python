@@ -1,4 +1,3 @@
-# Regular Polygons: polysum
 # A regular polygon has 'n' number of sides. Each side has length 's'.
 # * The area of regular polygon is: (0.25*n*s^2)/tan(pi/n)
 # * The perimeter of a polygon is: length of the boundary of the polygon

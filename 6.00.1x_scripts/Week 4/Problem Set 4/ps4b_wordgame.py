@@ -1,11 +1,14 @@
-from ps4a import *
+# 
+# A Word Game: Part b
+# 
+# Playing the game with computer
+#
+
+from ps4a_wordgame import *
 import time
 
-
 #
-#
-# Problem #6: Computer chooses a word
-#
+# Computer chooses a word
 #
 def compChooseWord(hand, wordList, n):
     """
@@ -43,7 +46,7 @@ def compChooseWord(hand, wordList, n):
     return best_word
 
 #
-# Problem #7: Computer plays a hand
+# Computer plays a hand
 #
 def compPlayHand(hand, wordList, n):
     """
@@ -89,7 +92,7 @@ def compPlayHand(hand, wordList, n):
     print "Total score: %s points.\n" % total_score
 
 #
-# Problem #8: Playing a game
+# Playing a game
 #
 #
 def playGame(wordList):
@@ -145,5 +148,4 @@ def playGame(wordList):
 if __name__ == '__main__':
     wordList = loadWords()
     playGame(wordList)
-
 

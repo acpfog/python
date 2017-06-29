@@ -1,4 +1,7 @@
-
+#
+# Write a function called dict_interdiff that takes in two dictionaries (d1 and d2).
+# The function will return a tuple of two dictionaries: a dictionary of the intersect of d1 and d2 and a dictionary of the difference of d1 and d2
+#
 def dict_interdiff(d1, d2):
     r1 = {}
     r2 = {}
