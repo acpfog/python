@@ -1,3 +1,14 @@
+# 
+# You change your mind, and now want the behavior as described in problem6-1.py, except that you want:
+# 
+# >>> ae.say('the sky is blue')
+# eric says: It is obvious that I believe that eric says: the sky is blue
+# 
+# >>> ae.lecture('the sky is blue')
+# It is obvious that I believe that eric says: the sky is blue
+#
+# Change the definition of ArrogantProfessor so that the behavior described above is achieved.
+#
 class Person(object):     
     def __init__(self, name):         
         self.name = name     

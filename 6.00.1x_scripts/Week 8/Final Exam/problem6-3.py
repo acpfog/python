@@ -1,3 +1,14 @@
+# 
+# You change your mind once more. You want to keep the behavior from problem6-2.py, but now you would like:
+# 
+# >>> pe.say('the sky is blue')
+# Prof. eric says: I believe that eric says: the sky is blue 
+# 
+# >>> ae.say('the sky is blue')
+# Prof. eric says: It is obvious that I believe that eric says: the sky is blue 
+#
+# Change the Professor class definition in order to achieve this.
+#
 class Person(object):     
     def __init__(self, name):         
         self.name = name     
