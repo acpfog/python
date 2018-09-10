@@ -1,6 +1,8 @@
-# Here I placed my different Python scripts
+# Here I placed my different Python scripts and apps
 
-The folder `6.00.1x_scripts` contains my solutions to exercises in introduction to programming using Python.
+The folder `6.00.1x_scripts` contains my solutions to exercises for a course "Introduction to programming using Python". 
 
-`dead_email_addresses_parser.py` parses the attachments and contents of incoming emails for delivery errors.<br />
-If the script find an delivery error, a recipient's address will be added to a table for further purposes.
+`dead_email_addresses_parser.py` parses for delivery errors in incoming emails. 
+A recipient's address will be saved in DB for further purposes, if the script find an delivery error.  
+
+`myapi-app` is a simple API apllication based on Flask with Helm deploy charts.
